@@ -3,12 +3,7 @@
  * @return {boolean}
  */
 const isPalindrome = (x) => {
-  const parseStringArray = x.toString().split('')
-  const parseString = parseStringArray.join('')
-  const reverseStringArray = parseStringArray.reverse()
-  const reverseString = reverseStringArray.join('')
-  return parseString === reverseString
-
+  return [...x.toString()].reverse().join('') === x
 };
 
-console.log(isPalindrome(3231))
+console.log(isPalindrome(232))
